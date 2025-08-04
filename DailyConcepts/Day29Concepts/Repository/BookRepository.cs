@@ -20,17 +20,17 @@ namespace Day29Concepts.Repository
 
         public async Task<List<BookModel>> GetAllBooksAsync()
         {
-            //var records = await _context.Books.Select(x => new BookModel()
-            //{
-            //    Id = x.Id,
-            //    Title = x.Title,
-            //    Description = x.Description,
-            //}).ToListAsync();
+            var records = await _context.Books.Select(x => new BookModel()
+            {
+                Id = x.Id,
+                Title = x.Title,
+                Description = x.Description,
+            }).ToListAsync();
 
-            //return records;
+            return records;
 
-            var records = await _context.Books.ToListAsync();
-            return _mapper.Map<List<BookModel>>(records);
+            //var records = await _context.Books.ToListAsync();
+            //return _mapper.Map<List<BookModel>>(records);
         }
 
         /// <summary>

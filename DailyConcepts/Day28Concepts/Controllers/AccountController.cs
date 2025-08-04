@@ -30,18 +30,18 @@ namespace Day28Concepts.Controllers
 
         }
 
-        //[HttpPost("login")]
-        //public async Task<IActionResult> Login([FromBody] SignInModel signInModel)
-        //{
-        //    var result = await _accountRepostiory.LoginAsync(signInModel);
-        //    {
-        //        if (string.IsNullOrEmpty(result)) 
-        //        {
-        //            return Unauthorized();
-        //        }
-        //        return Ok(result);
-        //    }
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] SignInModel signInModel)
+        {
+            var result = await _accountRepostiory.LoginAsync(signInModel);
+            {
+                if (string.IsNullOrEmpty(result))
+                {
+                    return Unauthorized();
+                }
+                return Ok(result);
+            }
 
-        //}
+        }
     }
 }

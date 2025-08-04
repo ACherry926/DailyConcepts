@@ -8,6 +8,6 @@ namespace Day28Concepts.Repository
     {
         Task<IdentityResult> SignUpAsync(StudentModel studentModel);
 
-        //Task<string> LoginAsync(SignInModel signInModel);
+        Task<string> LoginAsync(SignInModel signInModel);
     }
 }
